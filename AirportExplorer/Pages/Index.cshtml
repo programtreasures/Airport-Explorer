@@ -1,0 +1,38 @@
+﻿@page
+@model IndexModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Airport Explorer</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.42.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id='map' ></div>
+    
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.42.0/mapbox-gl.js'></script>
+    <div id='map' style='width: 400px; height: 300px;'></div>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoidGVjaG5pY2FsdHJhaW5lciIsImEiOiJjamI4djFyZHUwYTc2MnlsbHh6Z2J1ZDMyIn0.2wAIEezqIQrT2E3UI2Fm7w';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/light-v9'
+        });
+    </script>
+</body>
+</html>
